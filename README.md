@@ -1,4 +1,4 @@
-# ReactJsFolderStructure_Sidebar
+# ReactJs Folder Structure with Sidebar Layout
 Basic react folder structure with all the specific style ulilities, eslint config and webpack route config
 
 Steps to start=>
