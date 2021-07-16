@@ -1,6 +1,6 @@
 import { RiCpuFill } from 'react-icons/ri';
-import { CgDatabase } from 'react-icons/cg';
-import { AiOutlineContacts } from 'react-icons/ai';
+// import { CgDatabase } from 'react-icons/cg';
+// import { AiOutlineContacts } from 'react-icons/ai';
 
 export const sidebarItems = [
     {
