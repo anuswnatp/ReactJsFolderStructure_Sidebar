@@ -22,8 +22,9 @@ b)  font setting
 c)  padding settings
     and lots of pre build mixins to minimize all kind of development issues
 5)  Custom layout with sidebar and added open link to tweak it accordingly
-6)  Prime React for styling implemented [ feel free to uninstall ] {Caution sidebar wont work}
-    docs for prime react -> https://www.primefaces.org/primereact/showcase/#/
+6)  For icons React Icon Configured. [ https://react-icons.github.io/react-icons/ ]
+7)  Prime React for styling implemented [ feel free to uninstall ] {Caution sidebar wont work}
+    docs for prime react -> [ https://www.primefaces.org/primereact/showcase/#/ ]
     its free and amazing but prone to BUGS so think before continuing.
 
 
