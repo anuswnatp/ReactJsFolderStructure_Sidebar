@@ -1,0 +1,41 @@
+@import './variableImporter.scss';
+
+@mixin basicTable {
+    table {
+        background-color: $color-white;
+        text-transform: capitalize;
+        border: none !important;
+        width: 100%;
+        th {
+            text-align: center;
+        }
+        thead {
+            font-size: $font-size-xsmall;
+            border: none;
+            tr {
+                text-align: center;
+                background-color: $color-app-background;
+                th {
+                    text-align: left;
+                    font-weight: $font-weight-normal !important;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    text-align: left;
+                    padding-left: $padding-size-small;
+                    &:last-child {
+                        text-align: center;
+                    }
+                }
+                &:last-child {
+                    td {
+                        padding-bottom: $padding-size-xxxlarge;
+                    }
+                }
+            }
+        }
+    }
+}

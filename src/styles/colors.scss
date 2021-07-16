@@ -1,0 +1,142 @@
+/*
+  ================================================================================================
+  * Color Palettes - Define global colors.
+  *
+  * This includes,
+  * primary colors, secondary colors, gray-scale, data, and others.
+*/
+
+// Primary Colors - Slate Based
+// Hacking approach to replace slate-themed color globally, changed the slate color code below.
+// $color-dark-slate: #3F5469;
+// $color-slate: #456381;
+// $color-light-slate: #8FA9C2;
+$color-dark-slate: #151b42;
+$color-slate: #151b42;
+$color-light-slate: #40416d;
+
+$color-app-background: #f0f2f5;
+
+// Gray Scale
+$color-gray-20: #fafafa;
+$color-gray-40: #f5f5f5;
+$color-gray-60: #d4d4d4;
+$color-gray-70: #949494;
+$color-gray-80: #757575;
+$color-gray-100: #424242;
+$color-black: #000000;
+
+// Success - Failure
+$color-success: #48d2a0;
+$color-failure: #f54b5e;
+
+// Data Colors - Orange
+$color-orange: #fd7f0b; // Logo Secondary Color
+$color-light-orange: #f6a623;
+
+// Data Colors - Blue
+$color-blue: #3477d4;
+$color-medium-blue: #1f9ef4;
+$color-light-blue: #5ebbf8;
+$color-blue-20: #9dd6fe;
+$color-blue-10: #f2f9ff;
+$color-alice-blue: #eff5fa;
+
+// Data Colors - Purple
+$color-pruple: #8d3ff3;
+$color-medium-pruple: #a467f4;
+$color-light-pruple: #be91f8;
+
+// Data Colors - Cyan
+$color-cyan: #42c4d7;
+$color-medium-cyan: #4dcfe2;
+$color-light-cyan: #94dbe5;
+
+// DLF Mismatch - Yellow
+$color-yellow: #ffd731;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// primary colors
+$primary-color: rgb(255, 85, 85);
+
+// "Fill in Theme name" New Branding Colors, to be organized
+// Blue
+$color-blue-light: #f3fbfe;
+$color-tropical-sky-80: #025b8d;
+$color-tropical-sky-70: #025b8d;
+$color-tropical-sky-50: #0991cc;
+$color-tropical-sky-40: #2faadc;
+$color-tropical-sky-20: #8fd6f2;
+$color-tropical-sky-5: #dbf3fc;
+$color-tropical-sky-0: #f5fcff;
+$color-evening-sky-70: #1223b8;
+$color-evening-blue-60: #0b21eb;
+$color-tahitian-blue-60: #21b3d3;
+$color-tahitian-blue-40: #4ac9e5;
+$color-tahitian-blue-30: #81e0f4;
+
+// Purple
+$color-midnight: #151b42;
+$color-midnight-80: #3d4689;
+$color-midnight-60: #6e77c2;
+$color-midnight-40: #9fa6e5;
+$color-midnight-20: #cad0f8;
+$color-midnight-10: #dfe3fb;
+$color-midnight-0: #f7f9ff;
+$color-midnight-5: #eceefd;
+
+// Red
+$color-sunset-red: #f04e45;
+$color-sunset-red-90: #e03e28;
+$color-sunset-red-50: #ff8171;
+$color-sunset-red-30: #f4b4a8;
+$color-sunset-red-20: #f7e8e8;
+$color-sunset-red-10: #f7e8e8;
+$color-sunset-red-0: #fff9f9;
+$color-bad-red: #db1128;
+$color-bad-red-light: #db11285e;
+$color-blood-moon-60: #d60651;
+$color-blood-moon-20: #ffb6bd;
+
+// Gray
+$color-gray-light: #f7f9ff;
+$color-gray-border: #eaeaea;
+$color-midnight-grey-100: #232742;
+$color-midnight-grey-80: #404255;
+$color-midnight-grey-50: #8c91a1;
+$color-midnight-grey-60: #6f7288;
+$color-midnight-grey-30: #acb0bd;
+$color-midnight-grey-20: #c7cbd6;
+$color-midnight-grey-10: #dde0eb;
+$color-midnight-grey-5: #f0f2f7;
+$color-midnight-grey-0: #f7f9fc;
+
+// Green
+$color-aurora-green-80: #0a7b74;
+$color-aurora-green-50: #3abf8f;
+$color-aurora-green-70: #22a16e;
+$color-algae-green-60: #46d62e;
+$color-algae-green-40: #71e95e;
+$color-algae-green-30: #99f08b;
+$color-caribbean-green-40: #09c9b2;
+$color-caribbean-green-60: #0ead9a;
+$color-caribbean-green-30: #7cddd1;
+
+//yellow
+$color-sunburst-10: #fdf5e1;
+$color-sunburst-20: #faeac2;
+$color-sunburst-30: #f9e2aa;
+$color-sunburst-40: #ffde8d;
+$color-sunburst-50: #ffd05b;
+$color-sunburst-60: #ffc22b;
+$color-sunburst-70: #f4b415;
+$color-sunburst-80: #e1a612;
+
+// button colors
+$button-color-primary: #000;
+$button-color-secondary: rgb(92, 92, 92);
+$button-color-hover: rgb(59, 59, 59);
+$button-color-shadow: rgba(0, 0, 0, 0.5);
+$button-color-border: rgb(0, 0, 0);

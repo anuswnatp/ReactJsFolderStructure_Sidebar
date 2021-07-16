@@ -1,0 +1,294 @@
+/*
+  ================================================================================================
+  * Helper mixins and classes to simplify the usage of SASS functions and compile
+  * CSS.
+  *
+  * @author Sabarinathan Masilamani
+  *
+  * This includes,
+  * helpers for common functions, util methods to calc
+*/
+
+/** All the 'px' sizes are given assuming that the root font settings remain
+ * intact from browser settings. In other words - the default font-size 16px for 1 rem
+ *
+ * Refer font-settings.scss for PX to REM guide
+ **/
+$size-xxxsmall: 0.0625rem; // 1px
+$size-xxsmall: 0.125rem; // 2px
+$size-xsmall: 0.313rem; // 5px
+$size-small: 0.625rem; // 10px
+$size-medium: 0.938rem; // 15px
+$size-large: 1.25rem; // 20px
+$size-xlarge: 1.563rem; // 25px
+$size-xxlarge: 1.875rem; // 30px
+$size-xxxlarge: 2.188rem; // 35px
+
+$padding-size-xxxsmall: 0.0625rem; // 1px
+$padding-size-xxsmall: 0.125rem; // 2px
+$padding-size-xsmall: 0.313rem; // 5px
+$padding-size-small: 0.625rem; // 10px
+$padding-size-medium: 0.938rem; // 15px
+$padding-size-large: 1.25rem; // 20px
+$padding-size-xlarge: 1.563rem; // 25px
+$padding-size-xxlarge: 1.875rem; // 30px
+$padding-size-xxxlarge: 2.188rem; // 35px
+$padding-size-modal: $padding-size-xxlarge;
+
+$margin-size-xxxsmall: 0.0625rem; // 1px
+$margin-size-xxsmall: 0.125rem; // 2px
+$margin-size-xsmall: 0.313rem; // 5px
+$margin-size-small: 0.625rem; // 10px
+$margin-size-medium: 0.938rem; // 15px
+$margin-size-large: 1.25rem; // 20px
+$margin-size-xlarge: 1.563rem; // 25px
+$margin-size-xxlarge: 1.875rem; // 30px
+$margin-size-xxxlarge: 2.188rem; // 35px
+
+$global-border-thickness: 0.063rem; //1px
+$global-border-radius: 0.4rem; //6px
+$global-boxshadow-opacity: 0.3;
+$global-background-opacity: 1;
+$global-hoverbg-opacity: 0.3;
+
+$border-radius-medium: 0.1875rem; //3px
+/** Standard sizes of some parts of the app. These are defined here, so they can be used elsewhere and
+  * it is easy to change them if required.
+ **/
+
+$sidebar-width: 20rem;
+$app-header-height: 5rem;
+$inapp-nav-height: 4rem;
+
+/** pixel to rem conversion
+  *
+  * 2px: 0.126rem;
+  * 3px: 0.163rem;
+  * 6px: 0.326rem;
+  * 8px: 0.4rem;
+  * 12px: 1.35rem;
+  * 13px: 1.413rem;
+  * 18px: 1.101rem;
+  * 24px: 1.5rem;
+  * 25px: 1.563rem;
+  * 30px: 1.875rem;
+  * 35px: 2.188rem;
+  * 38px: 2.351rem;
+  * 45px: 2.813rem;
+  * 50px: 3.125rem;
+  * 60px: 3.75rem;
+  * 90px: 5rem;
+  * 120px: 7.5rem;
+  * 122px: 7.6rem;
+  * 128px: 7.9rem;
+  * 135px: 8.438rem;
+  * 140px: 8.75rem;
+  * 150px: 9.375rem;
+  * 160px: 10rem;
+  * 255px: 15.937rem;
+  * 280px: 17.5rem;
+  * 350px: 21.875rem;
+  * 500px: 31.25rem;
+  * 600px: 37.5rem;
+  * 610px: 38.125rem;
+  * 810px: 50.625rem;
+  * 1300px: 81.25rem;
+  * 1425px: 89.062rem;
+  * 1450px: 90.625rem;
+  *
+  *
+ **/
+
+/*
+  * Color Mixins
+  */
+@mixin rgba-background($hexcolor, $opacity: $global-background-opacity) {
+    background-color: $hexcolor;
+    background-color: rgba($hexcolor, $opacity);
+}
+
+@mixin rgba-color($hexcolor, $opacity: $global-background-opacity) {
+    color: $hexcolor;
+    color: rgba($hexcolor, $opacity);
+}
+
+/*
+  * Common Helpers
+  */
+
+// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix Hack
+// @link http://danisadesigner.com/blog/flexbox-clear-fix-pseudo-elements/ Flexbox fix
+@mixin clearfix {
+    &::before,
+    &::after {
+        display: table;
+        content: " ";
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+// Removes the focus(weird blue line) around an element when a mouse input is detected.
+@mixin disable-mouse-outline {
+    [data-whatinput="mouse"] & {
+        outline: 0;
+    }
+}
+
+// Some display mixins
+@mixin show {
+    display: block !important;
+}
+
+@mixin hide {
+    display: none !important;
+}
+
+@mixin invisible {
+    visibility: hidden !important;
+}
+
+@mixin visible {
+    visibility: visible !important;
+}
+
+// Global Padding mixins
+@mixin padding-small {
+    padding: $padding-size-small;
+}
+
+@mixin padding-medium {
+    padding: $padding-size-medium;
+}
+
+@mixin padding-large {
+    padding: $padding-size-large;
+}
+
+@mixin padding-xlarge {
+    padding: $padding-size-xlarge;
+}
+
+@mixin padding($pad-size) {
+    padding: $pad-size;
+}
+
+@mixin main-panel-container-padding() {
+    padding: $padding-size-large $padding-size-small;
+}
+
+@mixin main-panel-container-margin() {
+    padding: $margin-size-large $margin-size-small;
+}
+
+@mixin full-padding($top, $right, $bottom, $left) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin no-padding() {
+    padding: 0;
+}
+
+// Global Margin mixins
+@mixin margin-small {
+    margin: $margin-size-small;
+}
+
+@mixin margin-medium {
+    margin: $margin-size-medium;
+}
+
+@mixin margin-large {
+    margin: $margin-size-large;
+}
+
+@mixin margin-xlarge {
+    margin: $margin-size-xlarge;
+}
+
+@mixin margin($margin-size) {
+    margin: $margin-size;
+}
+
+@mixin margin-center() {
+    margin: 0 auto;
+}
+
+@mixin no-margin() {
+    margin: 0;
+}
+
+// Border Helpers
+@mixin round-border-left($radius: $ascent-border-radius) {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin round-border-right($radius: $ascent-border-radius) {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin round-border($radius: $ascent-border-radius) {
+    border-radius: $radius;
+}
+
+@mixin no-round-border {
+    border-radius: 0;
+}
+
+@mixin no-border {
+    border: none;
+}
+
+@mixin border-top($thickness: $global-border-thickness, $color: $color-gray-40) {
+    border-top: $thickness solid $color;
+}
+
+@mixin border-right($thickness: $global-border-thickness, $color: $color-gray-40) {
+    border-right: $thickness solid $color;
+}
+
+@mixin border-bottom($thickness: $global-border-thickness, $color: $color-gray-40) {
+    border-bottom: $thickness solid $color;
+}
+
+@mixin border-left($thickness: $global-border-thickness, $color: $color-gray-40) {
+    border-left: $thickness solid $color;
+}
+
+@mixin border($thickness: $global-border-thickness, $color: $color-gray-40) {
+    @include border-top($thickness, $color);
+    @include border-right($thickness, $color);
+    @include border-bottom($thickness, $color);
+    @include border-left($thickness, $color);
+}
+
+@mixin box-shadow($intensity: "light") {
+    box-shadow: 0 2px 6px rgba($color-gray-100, $global-boxshadow-opacity);
+}
+// example for new styles
+@mixin box-shadow-new() {
+    box-shadow: 0 0.5px 1.5px 0 $color-gray-60;
+}
+
+@mixin box-shadow-all-side($blur: 10px, $color: $color-gray-100) {
+    box-shadow: 0 0 $blur rgba($color, $global-boxshadow-opacity);
+}
+
+// To-Be-Categorize Helpers
+@mixin show-hand {
+    cursor: pointer;
+}
+
+@mixin description-text($color: $color-gray-80) {
+    color: $color;
+    font-size: $font-size-small;
+}
+
+@mixin description-name($color: $color-gray-80) {
+    @include description-text($color);
+    font-weight: $font-weight-semibold;
+}

@@ -1,0 +1,13 @@
+@import "../../../styles/variableImporter.scss";
+
+.wrapper {
+    label {
+        text-transform: capitalize;
+        font-size: $font-size-large;
+    }
+    .invalid {
+        &:focus {
+            box-shadow: 0 0 1px 0.2rem $color-bad-red-light !important;
+        }
+    }
+}

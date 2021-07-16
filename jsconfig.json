@@ -1,0 +1,15 @@
+{
+    "compilerOptions":{
+      "baseUrl": "./",
+      "jsx": "react",
+       "paths": {
+          "@components/*":["src/components/*"],
+          "@services/*":["src/services/*"],
+          "@store/*":["src/store/*"],
+          "@utils/*":["src/utilities/*"],
+          "~/*" :["src/*"]
+       }
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["./src"]
+ }

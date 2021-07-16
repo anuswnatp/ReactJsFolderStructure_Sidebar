@@ -1,0 +1,33 @@
+@import "../styles/variableImporter.scss";
+
+.childrenWrapper {
+    min-height: calc(100vh - 120px);
+    padding: $padding-size-small;
+}
+
+.sidebarItems {
+    padding: $padding-size-medium 0;
+    width: 100%;
+    text-align: left;
+    @include show-hand();
+    &:focus {
+        box-shadow: none;
+    }
+    span {
+        @include show-hand();
+        display: flex;
+        align-items: center;
+        color: $color-midnight-grey-100;
+        svg {
+            height: $font-size-normal;
+            width: $font-size-normal;
+            margin-right: $margin-size-small;
+        }
+        &::before {
+            @include hide();
+        }
+        font-size: $font-size-normal;
+        line-height: normal;
+        margin-left: $margin-size-xxlarge;
+    }
+}

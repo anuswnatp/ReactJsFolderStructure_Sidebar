@@ -1,0 +1,24 @@
+/* ----------------------------------------------
+    Device Breakpoints and Responsive Styles
+   ---------------------------------------------- */
+$breakpoints: (
+  /* 0 ,641px*/ "small": (0, 641px),
+  /* 641px, 1024px */ "medium": (642px, 1024px),
+  /* 1025px, 1440px */ "large": (1023px, 1440px),
+  /* 1441px, 1920px */ "xlarge": (1441px, 1920px),
+  /* 1921px */ "xxlarge": (1921px)
+);
+
+@mixin breakpoint($size) {
+  $min-value: nth(map-get($breakpoints, $size), 1);
+  $max-value: nth(map-get($breakpoints, $size), 2);
+  @if $size == xxlarge {
+    @media screen and (min-width: $min-value) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $max-value) {
+      @content;
+    }
+  }
+}

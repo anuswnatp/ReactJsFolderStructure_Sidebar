@@ -1,0 +1,7 @@
+node_modules/**/*
+jsconfig.js
+config-overrides.js
+src/App.js
+# src/index.js
+src/App.test.js
+reportWebVitals.js
