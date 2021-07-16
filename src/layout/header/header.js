@@ -4,7 +4,7 @@ import React from 'react';
 function Header() {
     return (
         <div className='layout-header'>
-            <span>Hello Zeitgiest header</span>
+            <span>Hello header</span>
         </div>
     );
 }

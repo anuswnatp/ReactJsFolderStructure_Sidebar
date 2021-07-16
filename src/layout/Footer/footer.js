@@ -4,7 +4,7 @@ import React from 'react';
 function Footer() {
     return (
         <div className='layout-footer'>
-            <span>Hello Zeitgiest Footer</span>
+            <span>Hello Footer</span>
         </div>
     );
 }
